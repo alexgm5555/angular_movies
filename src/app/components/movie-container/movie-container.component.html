@@ -1,1 +1,12 @@
-<p>movie-container works!</p>
+<div class="movie-container-component">
+  <mat-grid-list cols="4" rowHeight="180px" >
+    <mat-grid-tile *ngFor="let item of movies"
+    [colspan]="1"
+    [rowspan]="2"
+    [style.border]="2"
+  >
+      <app-movie-item [movie]="item"></app-movie-item>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+

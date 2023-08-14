@@ -1,4 +1,11 @@
-<app-first-layout>
-  <app-autocomplete></app-autocomplete>
-  <app-movie-item></app-movie-item>
+<app-first-layout >
+  <div class="movie-list-page">
+    <div class="left-container">
+      <app-movie-container [movies]="movies" ></app-movie-container>
+    </div>
+    <div class="right-container">
+      <app-autocomplete [movies]="movies"></app-autocomplete>
+      <!-- <app-movie-item></app-movie-item>     -->
+    </div>
+  </div>
 </app-first-layout>

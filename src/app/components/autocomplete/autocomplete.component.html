@@ -1,1 +1,16 @@
-<p>autocomplete works!</p>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Movie</mat-label>
+    <input type="text"
+           placeholder="Pick one"
+           aria-label="Movie"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption  #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option.title">
+        {{option.title}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
