@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../enviroments/enviroment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +13,7 @@ export class connectHttpClientService {
   ) {}
 
   get authorization() {
-    return 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmODIyZTM1MGJhYjQ3N2I3YTM1MGY' +
-           'yMTNlY2I4MWMzMSIsInN1YiI6IjY0ZDkwMDkzMDAxYmJkMDBjNmM3Yjc2MSIsInNjb3' +
-           'BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.cSuzVa5-J0CCjVNJiJHdYtTsOj' +
-           'MjEtQhOvof3iyADMA'
+    return environment.autorization;
   }
 
   get headers() {
