@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  isAutenticated = localStorage.getItem('autentication');
   title = 'movie-app';
 }

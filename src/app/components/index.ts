@@ -3,4 +3,5 @@ export { FooterComponent } from "./footer/footer.component";
 export { HeaderComponent } from "./header/header.component";
 export { MovieContainerComponent } from "./movie-container/movie-container.component";
 export { MovieItemComponent} from "./movie-item/movie-item.component";
+export { DetailItemComponent} from "./detail-item/detail-item.component";
 

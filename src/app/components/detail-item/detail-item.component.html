@@ -1,0 +1,18 @@
+<form class="detail-item-component" (submit)="$event.preventDefault()" *ngIf="detail.id!=0">
+  <mat-form-field  [style.fontSize]="500">
+    <mat-label>Anotation Movie</mat-label>
+    <textarea matInput
+              cdkTextareaAutosize
+              #autosize="cdkTextareaAutosize"
+              cdkAutosizeMinRows="1"
+              cdkAutosizeMaxRows="20"
+              [formControl]="anotationFormControl"
+    >
+    </textarea>
+  </mat-form-field>
+  <mat-form-field  [style.fontSize]="500">
+    <mat-label>Valoration Movie</mat-label>
+    <input matInput type="number" [formControl]="valueFormControl" placeholder="0">
+  </mat-form-field>
+  <button mat-raised-button (click)='sendForm()'>Submit</button>
+</form>

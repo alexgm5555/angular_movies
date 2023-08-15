@@ -1,4 +1,4 @@
-<form class="example-form">
+<form class="autocompletar-component">
   <mat-form-field class="example-full-width">
     <mat-label>Movie</mat-label>
     <input type="text"
@@ -6,8 +6,13 @@
            aria-label="Movie"
            matInput
            [formControl]="myControl"
-           [matAutocomplete]="auto">
-    <mat-autocomplete autoActiveFirstOption  #auto="matAutocomplete">
+           [matAutocomplete]="auto"
+    >
+    <mat-autocomplete
+      autoActiveFirstOption
+      #auto="matAutocomplete"
+      (optionSelected)="_movieSelected($event.option.value)"
+    >
       <mat-option *ngFor="let option of filteredOptions | async" [value]="option.title">
         {{option.title}}
       </mat-option>

@@ -1,4 +1,11 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { 
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  Output,
+  SimpleChanges
+} from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
@@ -11,6 +18,7 @@ import { Movie } from 'src/app/models';
 })
 export class AutocompleteComponent implements OnChanges{
   @Input('movies') options: Movie[] = [];
+  @Output('movieSelected') movieSelected = new EventEmitter<Movie>();
 
   myControl = new FormControl('');
   filteredOptions!: Observable<Movie[]>;
@@ -22,10 +30,15 @@ export class AutocompleteComponent implements OnChanges{
     );
   }
 
-  private _filter(value: string): Movie[] {
+  _filter(value: string): Movie[] {
     const filterValue = value.toLowerCase();
     return this.options.filter(
       option => option.title.toLowerCase().includes(filterValue)
     );
+  }
+
+  public _movieSelected(value: string) {
+    const resp = this.options.find(e => e.title === value);
+    this.movieSelected.emit(resp)
   }
 }

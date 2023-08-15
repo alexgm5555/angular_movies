@@ -1,0 +1,24 @@
+<form class="autocompletar-component" class="autenticate-component">
+  <mat-form-field  [style.fontSize]="500">
+    <mat-label>Barrer Token</mat-label>
+    <textarea matInput
+              cdkTextareaAutosize
+              #autosize="cdkTextareaAutosize"
+              cdkAutosizeMinRows="1"
+              cdkAutosizeMaxRows="20"
+              [formControl]="barerTokenControl"
+    >
+    </textarea>
+  </mat-form-field>
+  Señor usuario, para tener acceso a esta app es necesario logearse a esta aplicaciòn
+  
+  <a href="https://developer.themoviedb.org/">TMDB</a>
+  y pegar en el input un token parecido a este
+  <br>
+  <pre>Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmODIyZTM1MGJhYjQ3N2I3YTM
+    1MGYyMTNlY2I4MWMzMSIsInN1YiI6IjY0ZDkwMDkzMDAxYmJkMDBjNmM3Yjc
+    2MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.cSuzVa5-
+    J0CCjVNJiJHdYtTsOjMjEtQhOvof3iyADMA
+  </pre>
+  <button mat-raised-button (click)='sendForm()'>Send</button>
+</form>

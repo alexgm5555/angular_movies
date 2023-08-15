@@ -7,6 +7,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,9 +20,15 @@ import {
   MovieContainerComponent,
   HeaderComponent,
   FooterComponent,
+  DetailItemComponent
 } from './components';
 import { FirstLayoutComponent } from './layout/first-layout/first-layout.component';
-import { MovieListComponent, PageNotFoundComponent } from './pages';
+import {
+  MovieListComponent,
+  PageNotFoundComponent,
+  TvListComponent,
+  AutenticateComponent
+} from './pages';
 
 @NgModule({
   declarations: [
@@ -32,7 +40,10 @@ import { MovieListComponent, PageNotFoundComponent } from './pages';
     FooterComponent,
     FirstLayoutComponent,
     MovieListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TvListComponent,
+    DetailItemComponent,
+    AutenticateComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +56,9 @@ import { MovieListComponent, PageNotFoundComponent } from './pages';
     MatInputModule,
     MatAutocompleteModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonToggleModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

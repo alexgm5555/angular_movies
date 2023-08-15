@@ -1,9 +1,10 @@
-<div class="movie-item-component">
+<div  class="movie-item-component">
   <img 
+    *ngIf="movie.id!=''"
     src="https://www.themoviedb.org/t/p/w220_and_h330_face/{{movie.poster_path}}"
     alt=""
   >
   <div class="title">
-    {{movie.title}}
+    {{ movie.title }}
   </div>
 </div>
