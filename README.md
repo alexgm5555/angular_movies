@@ -14,3 +14,10 @@ para realizarlo registrarse en la siguiente pagina https://developer.themoviedb.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+Si la version de node es menor porfavor ejecutar esto
+```
+export NVM_DIR="$HOME/.nvm"
+ [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+```
+
+
